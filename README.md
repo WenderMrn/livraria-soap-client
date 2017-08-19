@@ -2,7 +2,7 @@
 
 Projeto cliente SOAP  para a disciplina de Programação Distribuída IFPB 2017.1.
 
-# server 
+# Server
 
 [Livraria ws ](https://github.com/WenderMrn/livrariaws.git)
 
