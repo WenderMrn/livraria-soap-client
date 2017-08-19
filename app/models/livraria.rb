@@ -59,7 +59,7 @@ class Livraria
         livro: {
           id:      (not livro.id.nil? ) ? livro.id.to_i : 0, 
           codigo:  livro.codigo,
-          titulo:  livro.titulo.upcase,
+          titulo:  livro.titulo,
           editora: livro.editora,
           isbn:    livro.isbn,  
           edicao:  livro.edicao, 

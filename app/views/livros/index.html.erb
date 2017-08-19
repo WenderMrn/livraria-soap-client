@@ -22,7 +22,7 @@
 				<% @livros.each do |livro| %>
 					<tr id="livro-<%= livro[:id] %>" class="livros-item">
 						<th scope="row"><%= truncate(livro[:codigo],lenght: 7) %></th>
-						<td><%= truncate(livro[:titulo]) %></td>
+						<td class="text-uppercase"><%= truncate(livro[:titulo]) %></td>
 						<td><%= truncate(livro[:autor]) %></td>
 						<td><%= truncate(livro[:isbn],lenght: 17) %></td>
 						<td>
