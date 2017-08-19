@@ -1,0 +1,24 @@
+<div class="form-group">
+  <%= f.label :codigo %>
+  <%= f.number_field :codigo, autofocus: true ,required: true, class: "form-control"%>
+</div>
+<div class="form-group">
+  <%= f.label :titulo %>
+  <%= f.text_field :titulo, required: true, class: "form-control text-uppercase"%>
+</div>
+<div class="form-group">
+  <%= f.label :editora %>
+  <%= f.text_field :editora, required: true, class: "form-control"%>
+</div>
+<div class="form-group">
+  <%= f.label :isbn, class: "text-uppercase" %>
+  <%= f.text_field :isbn, required: true, class: "form-control"%>
+</div>
+<div class="form-group">
+  <%= f.label :edição %>
+  <%= f.number_field :edicao, required: true, class: "form-control"%>
+</div>
+<div class="form-group">
+  <%= f.label :autor %>
+  <%= f.text_field :autor, required: true, class: "form-control"%>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="card col-md-8" style="padding: 14px;">
+			<div class="card-block">
+				<h3>Editar Livro</h3>
+				<hr/>
+				<%= form_for :livro, url: { action: :update }, method: :put  do |f| %>
+					<%= f.hidden_field :id %>
+					<%= render 'livro', f: f %>
+					<%= f.submit "Atualizar", class: "btn btn-primary" %>
+					<%= link_to "Voltar", livros_path, class: "btn btn-outline-secondary" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

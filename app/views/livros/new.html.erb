@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-center">
+  	<% if flash[:notice] %>
+   		<div class="col-md-6 alert alert-success"><%= flash[:notice] %></div>
+  	<% end %>
+		<div class="card col-md-8" style="padding: 14px;">
+		  <div class="card-block">
+		  	<h3>Novo Livro</h3>
+		  	<hr/>
+		      <%= form_for :livro, url: livros_path do |f| %>
+		        <%= render 'livro', f: f %>
+		        <%= f.submit "Salvar", class: "btn btn-primary" %>
+		        <%= link_to "Voltar", livros_path, class: "btn btn-outline-secondary" %>
+		      <% end %>
+		  </div>
+		</div>
+	</div>
+</div>

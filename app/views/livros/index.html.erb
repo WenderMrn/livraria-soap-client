@@ -1,0 +1,44 @@
+<h1>Acervo</h1>
+<div class="row justify-content-end">
+		<%= form_with url: "livros/search", html: {class: "form-inline my-2 my-lg-0"} do |f| %>
+			<%= f.text_field :isbn, class:"form-control mr-sm-2",placeholder:"Buscar" %>
+	    <%= f.submit "Buscar", class: "btn btn-outline-primary my-2 my-sm-0" %>
+	  <% end %>  
+		</form>
+</div>
+<div class="row justify-content-md-center">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Código</th>
+				<th>Título</th>
+				<th>Autor</th>
+				<th>ISBN</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% if not @livros.nil? %>
+				<% @livros.each do |livro| %>
+					<tr id="livro-<%= livro[:id] %>" class="livros-item">
+						<th scope="row"><%= truncate(livro[:codigo],lenght: 7) %></th>
+						<td class="text-uppercase"><%= truncate(livro[:titulo]) %></td>
+						<td><%= truncate(livro[:autor]) %></td>
+						<td><%= truncate(livro[:isbn],lenght: 17) %></td>
+						<td>
+						<%= link_to "Visualizar", livro_path(id: livro[:id]), class: "btn btn-outline-primary btn-sm" %>
+						<%= link_to "Editar", edit_livro_path(id: livro[:id]), class: "btn btn-outline-primary btn-sm" %>
+						<%= link_to 'Deletar', { action: :destroy, id: livro[:id] }, method: :delete, data: { confirm: 'Você tem certeza?' }, class: "btn btn-outline-danger btn-sm"  %>
+						</td>
+					</tr>
+				<% end %>
+			<% end %>
+		</tbody>
+	</table>
+	<% if @livros.nil? %>
+		<h3>Não há livros no acervo.</h3>
+	<% end %>
+	<div class="row col-md-12">
+		<%= link_to "Novo Livro", new_livro_path, class: "btn btn-primary" %>
+	</div>	
+</div>

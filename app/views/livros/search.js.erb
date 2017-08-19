@@ -1,0 +1,19 @@
+var livros = JSON.parse('<%= raw @livros %>');
+
+if(("<%= raw params[:isbn] %>").length){
+	$(".livros-item").hide();
+
+	$.each(livros, function(index,livro) {
+
+	  if($("#livro-"+livro.id).length){
+	    $("#livro-"+livro.id).show(); 
+		}
+
+	});
+
+	// exibir mesagem informando que a pesquisa não trouxe resultados
+
+}else{
+	$(".livros-item").show();
+}
+

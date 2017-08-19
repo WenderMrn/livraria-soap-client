@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row justify-content-center">
+		<div class="card col-md-8" style="padding: 14px;">
+		  <div class="card-block">
+		  	<h3>Livro</h3>
+		  	<hr/>
+		  	<div class="row">
+		  		<h5 class="col-md-5">
+				  	Título:
+				  	<small class="text-muted"><%= @livro.titulo %></small>
+					</h5>
+					<h5 class="col-md-5">
+					  Código:
+					  <small class="text-muted"><%= @livro.codigo %></small>
+					</h5>
+		  	</div>
+		  	<div class="row">
+		  		<h5 class="col-md-5">
+				  	Autor:
+				  	<small class="text-muted"><%= @livro.autor %></small>
+					</h5>
+					<h5 class="col-md-5">
+					  ISBN:
+					  <small class="text-muted"><%= @livro.isbn %></small>
+					</h5>
+		  	</div>
+		  	<div class="row">
+		  		<h5 class="col-md-5">
+				  	Editora:
+				  	<small class="text-muted"><%= @livro.editora %></small>
+					</h5>
+					<h5 class="col-md-5">
+					  Edição:
+					  <small class="text-muted"><%= @livro.edicao %>ª</small>
+					</h5>
+		  	</div>
+			</div>
+			<hr/>
+			<div class="row">
+			  <div class="col-md-5">
+			  	<%= link_to "Editar", edit_livro_path(id: @livro.id), class: "btn btn-outline-primary" %>
+			  	<%= link_to "Voltar", livros_path, class: "btn btn-outline-secondary" %>
+			  </div>
+		  </div>
+		  </div>
+		</div>
+	</div>
+</div>
