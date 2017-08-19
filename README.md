@@ -1,4 +1,4 @@
-# Livraria Soap Client
+# Livraria Soap Client em Rails
 
 Projeto cliente SOAP  para a disciplina de Programação Distribuída IFPB 2017.1.
 
